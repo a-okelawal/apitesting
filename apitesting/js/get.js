@@ -6,7 +6,7 @@ $(document).ready(function(){
       url: y,
     }).then(function(data)
     {
-      $('.test').append("<p>" + "The weather in " + x + " is " + data.weather[0].main + " with " + data.weather[0].description +"</p>" + "<br/>" + "Temperature: " + data.main.temp + " degrees");
+      $('.test').append("<p>" + "The weather in the state " + data.name + ", located in " + x + ", is: " + "<br/>" + "Decription: " + data.weather[0].main + " with " + data.weather[0].description + "<br/>" + "Temperature: Min - " + data.main.temp_min + "degrees" + " and Max - " + data.main.temp_max + "degrees" + "</br>" + "Wind: " + data.wind.speed + "km/s"  + "</p>");
       console.log(data.main.temp);
     });
   });
