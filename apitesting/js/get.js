@@ -11,3 +11,9 @@ $(document).ready(function(){
     });
   });
 });
+
+$(document).ready(function(){
+  $('#testclear').click(function(){
+    $('.test').empty();
+  });
+});
